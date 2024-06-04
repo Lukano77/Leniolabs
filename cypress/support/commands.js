@@ -23,8 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-
-import { LoginPage } from "./PageObject/LoginPage";
+import './PageObject/loginPage';
 
 Cypress.Commands.add('getByDataTest', (selector) => {
     return cy.get(`[data-test=${selector}]`)

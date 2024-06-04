@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { LoginPage } from "../../support/PageObject/LoginPage"
+import { LoginPage } from "../../support/PageObject/loginPage"
 describe('Test SauceDemo Leonilabs',()=>{
     const loginPage = new LoginPage();
     beforeEach(()=>{
@@ -8,5 +8,6 @@ describe('Test SauceDemo Leonilabs',()=>{
     })
     it('Swag Labs', ()=> {
         loginPage.clickLoginPage();
+     
     })
 })
