@@ -7,7 +7,6 @@ describe('Test SauceDemo Leonilabs',()=>{
         cy.visit('/')
     })
     it('Swag Labs', ()=> {
-        loginPage.clickLoginPage();
-     
+       cy.login("standard_user","secret_sauce");
     })
 })

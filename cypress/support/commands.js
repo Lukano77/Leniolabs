@@ -7,35 +7,19 @@
 // commands please read more here:
 // https://on.cypress.io/custom-commands
 // ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import './PageObject/loginPage';
 
 Cypress.Commands.add('getByDataTest', (selector) => {
     return cy.get(`[data-test=${selector}]`)
 });
 
-/*
-Cypress.Commands.add('login',(username,password)=>{
 
-    cy.get(selector.username).should('be.visible')
-    cy.get(selector.username).type(username)
-    cy.get(selector.password).type(password)
+Cypress.Commands.add('login',(user,pass)=>{
+    cy.getByDataTest('username').should('be.visible').type(user);
+    cy.getByDataTest('password').type(pass)
 
-    cy.get(selector.loginButton).click()
-})
-*/
+    cy.getByDataTest('login-button').click()
+
+
+
+});
