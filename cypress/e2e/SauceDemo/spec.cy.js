@@ -1,12 +1,13 @@
 /// <reference types="cypress" />
 
-import { LoginPage } from "../../support/PageObject/loginPage"
+import { LOGIN_USERS } from "../../support/const";
+
+
 describe('Test SauceDemo Leonilabs',()=>{
-    const loginPage = new LoginPage();
     beforeEach(()=>{
         cy.visit('/')
     })
     it('Swag Labs', ()=> {
-       cy.login("standard_user","secret_sauce");
+       cy.login(LOGIN_USERS.STANDAR.username,LOGIN_USERS.STANDAR.password);
     })
 })

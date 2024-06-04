@@ -17,9 +17,5 @@ Cypress.Commands.add('getByDataTest', (selector) => {
 Cypress.Commands.add('login',(user,pass)=>{
     cy.getByDataTest('username').should('be.visible').type(user);
     cy.getByDataTest('password').type(pass)
-
     cy.getByDataTest('login-button').click()
-
-
-
 });
